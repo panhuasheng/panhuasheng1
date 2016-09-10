@@ -24,13 +24,11 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 		String password = bufferedReader.readLine();
-		if ("123456".equals(password)) {
-			count();
-		}
+		count(password);
 	}
 
-	public static void count() throws IOException{
-		String path = "C:\\Users\\WatsonPan\\Desktop\\test.txt.zip";
+	public static void count(String password) throws IOException{
+		String path = "\\test.txt.zip";
 		ZipFile zipFile = new ZipFile(path);  
         InputStream inputStream = new BufferedInputStream(new FileInputStream(path));  
         ZipInputStream zipInputStream = new ZipInputStream(inputStream);
